@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <title>Регистрация</title>
    <link rel="stylesheet" href="main.css"> 
-   <script src="form.js"> </script>
  </head>
  <body>            
   <div class="form-display">
         <h1 style="color: black;" font align="center" >Register</h1>
-        <form method="post"> 
+        <div id="form"> 
 
         
                             <input data-validate-length-range="6" name="Name"  pattern="^[a-zA-Z]+$" placeholder="Username" required="required" type="text">
@@ -22,15 +21,28 @@
                             <br>
                             <input data-validate-length-range="6" name="Post code" pattern="^[0-9]{5}" placeholder="Post code" required="required" type="text">
                             <br>
-                            <input class='email' name="email"  id="checkEmail" placeholder="Email" required="required" type="email" >
+                            <input class='email' name="email"  onblur="checkEmail()" id="checkEmail" placeholder="Email" required="required" type="email" >
                             <br>  <br>
                             <input class="button-register" id='send' type="submit" value="Sign Up" onclick="checkEmail();">
 
-        </form>
+        </div>
 
     </div>
+    <script >
+                function checkEmail() {
+                    let el =  document.getElementById('checkEmail');
+  var emailAdress = el.value;
+  var validEmail =  /^[\w\.]+@[a-z0-9]+?(\.[a-z]{2,3}){1,2}$/;//початок від однієї букви до нескінченості, - + _, @, від онднієї букви до нескінченості
+        console.log(emailAdress);
 
-
+if (!validEmail.test(emailAdress)) {
+        el.classList.add("err");
+      console.log("Error");
+  }else{
+    el.classList.remove("err");
+  }
+}
+       
+    </script>
 </body>
 </html>
-
