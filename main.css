@@ -1,13 +1,12 @@
-body{
-	background: url(buckeye_leaf_diamond_scarletwhite.jpg) no-repeat center center fixed;
+body {
+	background: url(bg.jpg) no-repeat center center fixed;
 	background-size: contain;
-} 
-form {
+}
+#form {
 	text-align: center;
 	display: block;
-
 	margin-top: -80px;
 }
 h1 {
-	margin: 100px;
+	margin: 150px;
 }
