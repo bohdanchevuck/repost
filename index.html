@@ -6,12 +6,20 @@
         <link rel="stylesheet" href="main.css">        
     </head> 
 <body> 
-<div class = "form-display"> 
+<div class = "form-display" > 
     <h1 style = "color:blueviolet;" align = "center" > Register </h1>
         <div id = "form"> 
             <input name="Name"  pattern="^[a-zA-Z]+$" placeholder="Username" required="required" type = "text"> 
             <br>
             <input name="Surname" pattern="^[a-zA-Z]+$" placeholder="Surname" required = "required" type ="text">
+            <br>
+            <input type = "password" name = "Password" placeholder="Password" required ="required">
+            <br>
+            <input name="Address, City, Country" pattern="^[a-zA-Z]+$" placeholder="Address, City, Country" required="required" type ="text">
+            <br>
+            <input name="Index" pattern="[0-9]{5}" placeholder="Index" required ="required" type ="text">
+            <br>
+            <input type="submit" value ="Submit">
         </div>
 
 </div>
